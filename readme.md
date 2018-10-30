@@ -1,8 +1,6 @@
 # Node.js scripting samples 📝 
 
-This repo contains a few code samples designed to demonstrate how you can solve specific problems (and make life easier in general!) by creating your own scripts and tools using Javascript! Useful for when you only vaguely remember `bash`. All samples use Node.js and require Node ^8.9.1 to be installed. 
-
-Hope this helps someone learn! Feel free to submit a pull request or fork and make your own changes! 
+This repo contains a few code samples designed to demonstrate how you can solve specific problems (and make life easier in general) by creating your own scripts in Javascript! Useful for when you only vaguely remember `bash`. All samples use Node.js and require Node ^8.9.1 to be installed. 
 
 ## 🛠 Getting started 
 Requires Node ^8.9.1
@@ -14,7 +12,7 @@ npm install  # or yarn install
 ## 💁🏻‍ Walking through the samples 
 
 ### `/helloworld` - A simple example
-A simple helloworld example, which prints a tiny "hello world" in your terminal.
+The most basic of the basic helloworld examples, which prints a tiny "hello world" in your terminal.
 
 In the terminal, run:
 ```bash
@@ -67,6 +65,9 @@ node excel-watcher/excelhelper.js
 ```
 
 #### Things to improve
+
+Feel free to submit a PR or fork and make changes 👍
+
 - Make `excelhelper.js`, `photos.js` accept parameters
 - Take `howfast` one step further by using a headless browser, reading the `<div>` containing the speed value on the site, and printing it into the console.
 - add a http/dns lookup to the `howfast` command to make sure it fails gracefully when the service is down/there is no internet.
@@ -74,4 +75,4 @@ node excel-watcher/excelhelper.js
 
 ---------
 
-Thanks to London Front End Developer Meetup for asking me to explore this topic! My keynote lives in the /slides folder.
+Thanks to London Front End Developer Meetup for asking me to explore this topic. My keynote lives in the /slides folder.
