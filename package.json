@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-scripts-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "howfast": "./fast/fast.js"
+  },
+  "author": "Jenna Le",
+  "license": "ISC",
+  "dependencies": {
+    "excelcsv": "^0.1.2",
+    "probe-image-size": "^4.0.0",
+    "website-popup": "^2.0.0"
+  }
+}
