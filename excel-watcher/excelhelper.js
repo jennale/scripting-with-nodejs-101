@@ -1,8 +1,10 @@
 const fs = require("fs");
 const ExcelCSV = require("excelcsv");
+const path = require("path")
+const { argv } = require("yargs");
 
-const fileIn = "./excel-watcher/excel.xlsx";
-const fileOut = "./excel-watcher/excel.csv";
+let fileIn = argv.input ? path.resolve(__dirname, argv.input) : path.join(__dirname, 'excel.xlsx')
+let fileOut = argv.output ? path.resolve(__dirname, argv.output) : path.join(__dirname, 'excel.csv')
 
 const parser = new ExcelCSV(fileIn, fileOut);
 
