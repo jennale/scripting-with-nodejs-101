@@ -15,5 +15,8 @@
     "excelcsv": "^0.1.2",
     "probe-image-size": "^4.0.0",
     "website-popup": "^2.0.0"
+  },
+  "devDependencies": {
+    "yargs": "^12.0.2"
   }
 }

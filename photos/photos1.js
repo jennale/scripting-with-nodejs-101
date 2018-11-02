@@ -1,18 +1,31 @@
 const fs = require("fs");
 const path = require("path");
+const { argv } = require("yargs")
 
-fs.readdir("./photos-start", (err, files) => {
-  files.forEach((file, index) => {
-    if (!path.extname(file)) {
-      return;
-    }
+if(!argv.path) {
+  throw new Error('No path supplied, please supply a path to the folder containing the photos you wish to modify')
+}
 
-    let newName = "photo_" + index + path.extname(file);
+const pathToPhotos = path.resolve(__dirname, argv.path)
 
-    fs.copyFile("photos-start/" + file, "renamed/" + newName, err => {
-      if (err) {
-        console.error(err);
+fs.readdir(pathToPhotos, (err, files) => {
+  if(err) throw new Error(err)
+
+  fs.mkdir(path.join(pathToPhotos, 'renamed'), err => {
+    if(err) throw new Error(err)
+
+    files.forEach((file, index) => {
+      if (!path.extname(file)) {
+        return;
       }
+  
+      let newName = "photo_" + index + path.extname(file);
+  
+      fs.copyFile(path.join(pathToPhotos, file), path.join(pathToPhotos, "renamed", newName), err => {
+        if (err) {
+          console.error(err);
+        }
+      });
     });
-  });
+  })
 });
